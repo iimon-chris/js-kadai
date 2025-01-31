@@ -1,8 +1,10 @@
+// fetchData();
+
 async function fetchData() {
     try{
-
-        const dogName = document.getElementById("dogName").value.toLowerCase();
-        const response = await fetch(`https://dog.ceo/api/breeds/image/random`);
+        
+        const dogName1 = document.getElementById("dogName").value.toLowerCase();
+        const response = await fetch(`https://dog.ceo/api/breed/${dogName1}/images/random`);
 
         if(!response.ok){
             throw new Error("Could not get the Image!");
